@@ -15,8 +15,8 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-6xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-tr to-[#22c2a8] from-[#ff489a]">
+          <h1 className="text-white mb-4 text-3xl sm:text-6xl lg:text-8xl lg:leading-normal font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-tr to-[#22c2a8] from-[#ff489a] text-5xl">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
@@ -26,7 +26,7 @@ const HeroSection = () => {
                 1000,
                 "11 year old tinkerer",
                 1000,
-                "Book reader",
+                "book reader",
                 1000,
                 "who breaks stuff",
                 1000,
@@ -36,7 +36,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl mt-12">
+          <p className="text-[#ADB7BE] font-BadUnicorn text-3xl sm:text-4xl mb-6 lg:text-5xl mt-12">
             I love breaking and experimenting with machines and their parts !!
           </p>
           {
@@ -59,7 +59,7 @@ const HeroSection = () => {
           </div>
              */
           }
-          
+
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
