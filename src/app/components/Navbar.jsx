@@ -27,7 +27,7 @@ const Navbar = () => {
             href={"/"}
             className="text-2xl font-Midorima md:text-6xl text-white "
           >
-            Aakarsh
+            Aakarsh.
           </Link>
           <div className="mobile-menu block md:hidden">
             {!navbarOpen ? (
