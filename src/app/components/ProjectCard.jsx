@@ -1,40 +1,35 @@
+"use client";
+
+import Image from "next/image";
 import React from "react";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
+import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+export default function ProjectCard({ title, description, imgUrl }) {
   return (
-    <div>
-      <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
-          style={{
-            background: `url(${imgUrl})`,
-            backgroundSize: "contain", // Ensures the image fits inside the container without cropping
-            backgroundPosition: "center", // Centers the image within the container
-            backgroundRepeat: "no-repeat" // Prevents the image from repeating
-          }}>
-        
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
-          <Link
-            href={gitUrl}
-            className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
-          >
-            <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
-          </Link>
-          <Link
-            href={previewUrl}
-            className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
-          >
-            <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
-          </Link>
-        </div>
-      </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
-      </div>
-    </div>
+    (<CardContainer className="inter-var">
+      <CardBody
+        className=" relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg-black/20 border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+        <CardItem
+          translateZ="50"
+          className="text-xl font-bold text-white">
+          {title}
+        </CardItem>
+        <CardItem
+          as="p"
+          translateZ="60"
+          className=" text-sm max-w-sm mt-2 text-neutral-300">
+          {description}
+        </CardItem>
+        <CardItem translateZ="100" className="w-full mt-4">
+          <Image
+            src={imgUrl}
+            height="1000"
+            width="1000"
+            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            alt="thumbnail" />
+        </CardItem>
+      </CardBody>
+    </CardContainer>)
   );
-};
-
-export default ProjectCard;
+}

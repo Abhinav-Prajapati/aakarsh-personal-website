@@ -9,8 +9,6 @@ const projectsData = [
     title: "Working Windmill",
     description: "working windmill demonstrating SDG 7",
     image: "/images/projects/1.jpeg",
-    gitUrl: "/",
-    previewUrl: "/",
   },
 ];
 
@@ -22,7 +20,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className="text-center text-5xl font-bold mt-4 mb-8 md:mb-12 font-Midorima tracking-widest text-emerald-300">
         My Projects
       </h2>
       <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -39,8 +37,6 @@ const ProjectsSection = () => {
               title={project.title}
               description={project.description}
               imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
             />
           </motion.li>
         ))}
