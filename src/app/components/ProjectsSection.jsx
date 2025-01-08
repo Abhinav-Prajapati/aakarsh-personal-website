@@ -10,6 +10,12 @@ const projectsData = [
     description: "working windmill demonstrating SDG 7",
     image: "/images/projects/1.jpeg",
   },
+  {
+    id: 2,
+    title: "Esp Now RC car ",
+    description: "Transmitter and RC car based on Esp.",
+    image: "/images/projects/rc_car.webp",
+  },
 ];
 
 const ProjectsSection = () => {
